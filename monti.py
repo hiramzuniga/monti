@@ -4,7 +4,7 @@ import os
 import glob
 
 #--------------------------------------------------------------------------------
-# Aplication developed in python the unique function is to burn iso images 
+# Aplication developed in python the function is to burn iso images 
 # into external device storage, for example it works perfectly with Raspbian 
 # and others SO available for Raspberry, works to with any iso file and any 
 # device.

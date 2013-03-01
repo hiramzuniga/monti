@@ -1,1 +1,1 @@
-Monti: Aplicacion escrita en python ayudado de la libreria wxpython. Su principal funcionalidad es montar imagenes is en medios extraibles (usb, sd), ayudados del comando dd. En un principiopensada para montar iso#'s de para Raspberry asi que funciona perfectamente con Raspbian.
+Monti: Aplicacion escrita en python con ayuda de la libreria wxpython. Su principal funcionalidad es montar imagenes en medios extraibles (usb, sd). En un principio pensada para montar solo archivos iso para Raspberry pi asi que funciona perfectamente con Raspbian para crear una memoria SD booteable.

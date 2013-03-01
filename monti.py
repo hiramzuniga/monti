@@ -151,14 +151,14 @@ class monti(wx.Frame):
 #----------------------------------------------------------------------
 #About de la aplicación        
     def OnAboutBox(self, e):
-        op = os.open("stuff/desc", os.O_RDWR) 
+        op = os.open("data/desc", os.O_RDWR) 
         self.f  = os.read(op,280) 
         description = self.f 
-        li = os.open("stuff/lice", os.O_RDWR) 
+        li = os.open("data/lice", os.O_RDWR) 
         self.l  = os.read(li,200) 
         licence = self.l
         info = wx.AboutDialogInfo()
-        info.SetIcon(wx.Icon('stuff/logo.png', wx.BITMAP_TYPE_PNG))
+        info.SetIcon(wx.Icon('data/logo.png', wx.BITMAP_TYPE_PNG))
         info.SetName('Monti')
         info.SetVersion('0.1b')
         info.SetDescription(description)

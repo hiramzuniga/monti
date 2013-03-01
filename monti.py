@@ -4,8 +4,10 @@ import os
 import glob
 
 #--------------------------------------------------------------------------------
-# App in python to burn iso images, for example it works perfectly with
-# Raspbian and others SO, available for Raspberry. And works with any iso file.
+# Aplication developed in python the unique function is to burn iso images 
+# into external device storage, for example it works perfectly with Raspbian 
+# and others SO available for Raspberry, works to with any iso file and any 
+# device.
 #--------------------------------------------------------------------------------
 
 wildcard = "*.iso"

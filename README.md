@@ -1,5 +1,5 @@
 #Abstrac
-Aplication developed in python the unique function is to burn iso images into external device storage, for example it works perfectly with Raspbian and others SO available for Raspberry, works to with any iso file and any device.
+Aplication developed in python the function is to burn iso images into external device storage, for example it works perfectly with Raspbian and others SO available for Raspberry, works to with any iso file and any device.
 
 #Monti: 
 Aplicación escrita en python con la ayudado de la librería wxpython para crear una interfaz de usuario. Su principal función es montar imágenes iso en medios extraíbles (usb, sd), ayudados del comando dd. En un principio empecé a desarrollarla con el único fin de utilizarla con memorias SD para montar Raspbian dentro de mi Raspberry, durante el desarrollo de la aplicación quise crearla para propósitos más generales. Puede ser usada perfectamente para grabar SO desarrollados para Raspberry pi.

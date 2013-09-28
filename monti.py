@@ -142,7 +142,7 @@ class Monti(wx.Frame):
 
         hbox4.Add(salir, flag=wx.TOP | wx.LEFT, border=15)
         hbox4.Add(self.btnBurn, flag=wx.LEFT, border=5)
-        hbox4.Add(self.btnAcerca, flag=wx.LEFT, border=250)
+        hbox4.Add(self.btnAcerca, flag=wx.LEFT, border=170)
 
         vbox.Add(hbox, flag=wx.TOP, border=10)
         vbox.Add(hbox1, flag=wx.TOP, border=20)

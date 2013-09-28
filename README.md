@@ -18,7 +18,7 @@ Antes de ejecutar la aplicación es recomendable tener formateado el dispositivo
 
 	python monti.py
 
-Una vez ejecutada la aplicación siga los sencillos 4 pasos para grabar la imagen, el grabado de los datos tarda un poco(aprox. 3min), cuando presione el botón Quemar notara que se quedara con el efecto presionado, cuando termine el proceso de copiado empezara a correr una barra para verificar el correcto copiado de los archivos cuando la etiqueta Correcto aparece en la ventana ya puede cerrar la aplicación.
+Una vez ejecutada la aplicación siga los sencillos 5 pasos para grabar la imagen, el grabado de los datos tarda un poco(aprox. 3min), cuando presione el botón Quemar notara que se quedara con el efecto presionado, cuando termine el proceso de copiado empezara a correr una barra para verificar el correcto copiado de los archivos cuando la etiqueta Correcto aparece en la ventana ya puede cerrar la aplicación.
 
 #Corriendo
 ![](https://dl.dropbox.com/u/12001689/montirun.png)

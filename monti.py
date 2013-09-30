@@ -5,15 +5,13 @@ import wx.animate
 import os
 import glob
 import time
-import threading
-from subprocess import Popen
 
-#--------------------------------------------------------------------------------
-# Aplication developed in python the function is to burn iso images 
-# into external device storage, for example it works perfectly with Raspbian 
-# and others SO available for Raspberry, works to with any iso file and any 
+#------------------------------------------------------------------------------
+# Aplication developed in python the function is to burn iso images
+# into external device storage, for example it works perfectly with Raspbian
+# and others SO available for Raspberry, works to with any iso file and any
 # device.
-#--------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
 
 wildcard = "Imágen (*.img)|*.img| Iso (*.iso)|*.iso|All files (*.*)|*.*"
 
@@ -77,7 +75,7 @@ class Monti(wx.Frame):
         sis.SetBackgroundColour(wx.Colour(255, 255, 255))
         sis.SetForegroundColour(wx.Colour(0, 0, 0))
         sis.SetFont(wx.Font(10, wx.MODERN, wx.NORMAL, wx.BOLD, 0, ""))
-        cb = wx.ComboBox(panel, pos=(50, 30), size=(100, -1), 
+        cb = wx.ComboBox(panel, pos=(50, 30), size=(100, -1),
             choices=self.drive, style=wx.CB_READONLY)
         cb.Bind(wx.EVT_COMBOBOX, self.onSelect)
         hbox2.Add(sis, proportion=1, flag=wx.TOP | wx.LEFT, border=15)
@@ -113,7 +111,7 @@ class Monti(wx.Frame):
 
         ani = wx.animate.Animation('data/cargando.gif')
         self.ctrl = wx.animate.AnimationCtrl(panel, -1, ani)
-        self.ctrl.SetUseWindowBackgroundColour()    
+        self.ctrl.SetUseWindowBackgroundColour()
         self.ctrl.Play()
         self.ctrl.Hide()
 
@@ -147,14 +145,14 @@ class Monti(wx.Frame):
         vbox.Add(hbox, flag=wx.TOP, border=10)
         vbox.Add(hbox1, flag=wx.TOP, border=20)
         vbox.Add(hbox2, flag=wx.TOP, border=10)
-        vbox.Add(desmontar, flag=wx.TOP, border = 20)
+        vbox.Add(desmontar, flag=wx.TOP, border=20)
         vbox.Add(hbox3, flag=wx.TOP, border=10)
         vbox.Add(hbox4, flag=wx.TOP, border=20)
 
         panel.SetSizer(vbox)
 
     def OnFormat(self, event):
-        n = self.drive.encode('ascii','ignore')
+        n = self.drive.encode('ascii', 'ignore')
         primerMontaje = list(n)
         segundoMontaje = list(n)
         for i in [0]:
@@ -188,13 +186,13 @@ class Monti(wx.Frame):
         print "Ha seleccionado el dispositivo montado en:\n" + self.drive
 
     def onOk(self, e):
-        n = self.path.encode('ascii','ignore')
-        path = list(n)  
+        n = self.path.encode('ascii', 'ignore')
+        path = list(n)
         pathF = ''.join(path)
         print pathF
-        s = self.drive.encode('ascii','ignore')
+        s = self.drive.encode('ascii', 'ignore')
         primerMontaje = list(s)
-        for i in [0,1]:
+        for i in [0, 1]:
             primerMontaje.pop()
         montaje = ''.join(primerMontaje)
         print 'Empezando a quemar'
@@ -204,13 +202,14 @@ class Monti(wx.Frame):
         time.sleep(2)
         os.system("sync")
         print 'Termine'
-        dlg1=wx.MessageDialog(self, "Imagen Montada Correctamente", u"Monti0.3.2b", wx.OK | wx.ICON_INFORMATION | wx.CENTRE, pos=wx.DefaultPosition)
+        dlg1 = wx.MessageDialog(self, "Imagen Montada Correctamente",
+            u"Monti0.3.2b", wx.OK | wx.ICON_INFORMATION | wx.CENTRE,
+            pos=wx.DefaultPosition)
         ret = dlg1.ShowModal()
         if ret == wx.ID_OK:
             self.Show()
         print 'Path', pathF
         print 'Montaje', montaje
-
 
     def onQuit(self, e):
         dial = wx.MessageDialog(None, 'Realmente quieres salir?', 'Pregunta',
@@ -227,7 +226,8 @@ class Monti(wx.Frame):
             self.Show()
 
     def meSystem(self):
-        os.system("find /dev/ -name 'sd[b-Z][0-9]' > hd.monti && find /dev/ -name 'mmcblk[0-9]' >> hd.monti")
+        os.system("""find /dev/ -name 'sd[b-Z][0-9]' > hd.monti &&
+            find /dev/ -name 'mmcblk[0-9]' >> hd.monti""")
         f = open("hd.monti")
         self.drive = []
         for line in f:
